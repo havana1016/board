@@ -47,7 +47,7 @@ public class bController {
     @GetMapping("/pwc/update")
     String pwc(@RequestParam("id")int id,Model model){
         model.addAttribute("id",id);
-        return "pwck";
+        return "/pwck";
     }
     @PostMapping("pwc/uppw")
     @ResponseBody bDto uppw(@ModelAttribute bDto mem){
@@ -58,6 +58,7 @@ public class bController {
 
     }
 
-//
+
+
 
 }

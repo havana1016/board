@@ -21,12 +21,11 @@
                 data:{id:${id},bpw:pw.value},
                 dataType:"json",
                 success:function (e){
-                    alert("ajax 리턴 성공")
-
-
+                    alert("성공")
                 },
                 error:function (e){
                     alert("비밀번호를 확인해주세요")
+                    location.href="/board/detail?id=${id}"
 
                 }
 
