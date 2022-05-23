@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="data">
+    <insert id="save" parameterType="dto">
+insert into board_table (btitle,bname,bpw,btext,bdate) values (#{btitle},#{bname},#{bpw},#{btext},now())
+
+    </insert>
+<select id="findall" resultType="dto">
+    select * from board_table
+</select>
+
+    <select id="findmem" resultType="dto">
+        select * from board_table where id=#{id}
+
+    </select>
+    <update id="hit">
+        update board_table set bhit=bhit+1 where id=#{id}
+    </update>
+    <select id="bpwc" resultType="dto">
+        select * from board_table where id=#{id} and bpw=#{bpw}
+    </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
